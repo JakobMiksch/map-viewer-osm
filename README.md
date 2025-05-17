@@ -9,6 +9,13 @@
 
 Run the `public/` folder as a static website:
 
-- node: `npx http-server public -c-1`
-- php: `php -S localhost:8000 -t public`
-- python: `python3 -m http.server 8000 --directory public`
+```shell
+# node
+npx http-server public -c-1
+
+# python
+python3 -m http.server 8000 --directory public
+
+# php
+php -S localhost:8000 -t public
+```
