@@ -1,12 +1,13 @@
 const map = new maplibregl.Map({
   container: "map",
+  hash: 'map',
   center: [12, 50],
-    zoom: 6,
-    style: {
-          version: 8,
-          sources: {},
-          layers: []
-        }
+  zoom: 6,
+  style: {
+      version: 8,
+      sources: {},
+      layers: []
+    }
 });
 
 const geocoderApi = {
