@@ -52,7 +52,8 @@ const geocoderApi = {
 map.addControl(
   new MaplibreGeocoder(geocoderApi, {
     maplibregl,
-  })
+  }),
+  "top-left"
 );
 
 map.addControl(
@@ -84,5 +85,16 @@ map.addControl(
     initialBasemap: "OpenStreetMap",
     expandDirection: "top",
   }),
-  "bottom-left"
+  "top-right"
 );
+
+const scale = new maplibregl.ScaleControl();
+map.addControl(scale);
+
+const nav = new maplibregl.NavigationControl(
+  {showCompass: false}
+);
+map.addControl(nav, 'top-left');
+
+map.dragRotate.disable();               
+map.touchZoomRotate.disableRotation(); 
