@@ -88,9 +88,11 @@ map.addControl(
   "top-right"
 );
 
+// scale
 const scale = new maplibregl.ScaleControl();
 map.addControl(scale);
 
+// navigation settings
 const nav = new maplibregl.NavigationControl(
   {showCompass: false}
 );
@@ -98,3 +100,7 @@ map.addControl(nav, 'top-left');
 
 map.dragRotate.disable();               
 map.touchZoomRotate.disableRotation(); 
+
+// locate user
+map.addControl(new maplibregl.GeolocateControl(), 'top-left');
+
